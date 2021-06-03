@@ -1,0 +1,10 @@
+package com.spring.student;
+
+public class Student {
+	private String name;
+	private String age;
+	private String gradeName;
+	private String classNum;
+	
+	
+}

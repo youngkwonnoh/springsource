@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.spring.poly.SamsungTV"/>
+    <fullyQualifiedTypeName name="com.spring.poly.LgTV"/>
+    <fullyQualifiedTypeName name="com.spring.poly.SonySpeaker"/>
+    <fullyQualifiedTypeName name="com.spring.poly.SamsungSpeaker"/>
+    <fullyQualifiedTypeName name="com.spring.basic.MessageBean"/>
+    <fullyQualifiedTypeName name="com.spring.basic.LgTV"/>
+    <fullyQualifiedTypeName name="com.spring.basic.SamsungTV"/>
+    <fullyQualifiedTypeName name="com.spring.student.Student"/>
+    <fullyQualifiedTypeName name="com.spring.student.StudentInfo"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.annotation.AnnotationBeanUtils"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowire"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Qualifier"/>
+    <fullyQualifiedTypeName name="javax.inject.Inject"/>
+    <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
+    <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
+    <fullyQualifiedTypeName name="javax.annotation.processing.Generated"/>
+    <fullyQualifiedTypeName name="lombok.Getter"/>
+    <fullyQualifiedTypeName name="lombok.Setter"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="com.spring.persistence.BoardDAO"/>
+    <fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+    <fullyQualifiedTypeName name="com.spring.service.BoardService"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.StaticApplicationContext"/>
+    <fullyQualifiedTypeName name="com.spring.persistence.JDBCUtil"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.spring.domain.BoardVO"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+</qualifiedTypeNameHistroy>

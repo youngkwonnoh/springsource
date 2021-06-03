@@ -1,0 +1,47 @@
+package com.spring.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.spring.domain.BoardVO;
+import com.spring.persistence.BoardDAO;
+
+
+@Component("service")
+public class BoardServiceImpl implements BoardService {
+	
+	@Autowired
+	private BoardDAO dao;
+	
+	@Override
+	public boolean insert(BoardVO vo) {
+		return dao.insertBoard(vo) > 0 ? true:false;
+	}
+
+	@Override
+	public boolean update(BoardVO vo) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean delete(int bno) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public BoardVO getRow(int bno) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<BoardVO> getList() {
+		// TODO Auto-generated method stub
+		return dao.list();
+	}
+
+}

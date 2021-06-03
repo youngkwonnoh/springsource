@@ -1,0 +1,24 @@
+package com.spring.board;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.spring.domain.BoardVO;
+import com.spring.service.BoardService;
+
+public class BoardClient {
+	public static void main(String[] args) {
+		// Service => DAO
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("config.xml");
+		BoardService service = (BoardService) ctx.getBean("service");
+
+		BoardVO vo = new BoardVO();
+		vo.setTitle("스프링 컨테이너");
+		vo.setContent("스프링 컨테이너의 사용");
+		vo.setWriter("홍길동");
+		
+		boolean insertFlag = service.insert(vo);
+		System.out.println(insertFlag ? "성공" : "실패");
+	}
+
+}

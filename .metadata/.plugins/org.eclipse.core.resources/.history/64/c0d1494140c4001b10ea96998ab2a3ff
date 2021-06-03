@@ -1,0 +1,7 @@
+package com.spring.service;
+
+public class BoardService {
+	// dao 작업
+	
+	
+}

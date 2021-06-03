@@ -1,0 +1,33 @@
+package com.spring.poly;
+
+public class SamsungTV implements TV {
+
+	private SonySpeaker speaker; // null
+
+	@Override
+	public void turnOn() {
+		System.out.println("SamsungTV - 파워 On");
+
+	}
+
+	@Override
+	public void turnOff() {
+		System.out.println("SamsungTV - 파워 Off");
+
+	}
+
+	@Override
+	public void soundUp() {
+		// System.out.println("SamsungTV - volumeUp");
+		speaker.volumeUp();
+
+	}
+
+	@Override
+	public void soundDown() {
+		// System.out.println("SamsungTV - volumeDown");
+		speaker.volumeDown();
+
+	}
+
+}
