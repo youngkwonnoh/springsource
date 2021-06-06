@@ -11,4 +11,7 @@ public interface MemberService {
 	public MemberVO login(String userid, String password);
 	public List<MemberVO> getList();
 	
+	public boolean update2(MemberVO vo);
+	public boolean delete2(MemberVO vo);
+	
 }

@@ -23,4 +23,12 @@
 		select * from memberTBL
 	</select>
 	
+	
+	<update id="update2">
+		update memberTBL set password=#{changPass} where userid=#{userid} and password=#{password}
+	</update>
+	
+	<delete id="delete2">
+		delete from memberTBL where userid = #{userid} and password = #{password}
+	</delete>
 </mapper>

@@ -12,4 +12,7 @@ public interface MemberMapper {
 	public int delete(@Param("userid") String userid, @Param("password") String password);
 	public MemberVO login(@Param("userid") String userid, @Param("password") String password);
 	public List<MemberVO> list();
+	
+	public int update2(MemberVO vo);
+	public int delete2(MemberVO vo);
 }

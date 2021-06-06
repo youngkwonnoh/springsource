@@ -23,7 +23,7 @@ public class MemberClient {
 	
 		// 추가 되는지 확인
 		MemberVO vo1 = new MemberVO();
-		vo1.setUserid("kan123");
+		vo1.setUserid("kang123");
 		vo1.setPassword("kang123!@#");
 		vo1.setName("강호동");
 		vo1.setGender("남");
@@ -42,7 +42,12 @@ public class MemberClient {
 		System.out.println("-----------------------------------------");
 		
 		//update
-		System.out.println(service.update("kan123", "kang123!@#", "kang123!@#$") ? "변경 성공":"변경 실패");
+//		System.out.println(service.update("kan123", "kang123!@#", "kang123!@#$") ? "변경 성공":"변경 실패");
+		MemberVO vo2 = new MemberVO();
+		vo2.setUserid("kang123");
+		vo2.setPassword("kang123!@#");
+		vo2.setChangPass("kang123!@#$");
+		System.out.println(service.update2(vo2) ? "변경 성공":"변경 실패");
 		System.out.println("-----------------------------------------");
 		
 		// 변경 후 전체 조회
@@ -60,7 +65,11 @@ public class MemberClient {
 		
 
 		// 삭제 확인
-		System.out.println(service.delete("kan123", "kang123!@#$")?"삭제 성공":"삭제 실패");
+//		System.out.println(service.delete("kan123", "kang123!@#$")?"삭제 성공":"삭제 실패");
+		MemberVO vo3 = new MemberVO();
+		vo3.setUserid("kang123");
+		vo3.setPassword("kang123!@#$");
+		System.out.println(service.delete2(vo3)? "삭제 성공":"삭제 실패");
 		System.out.println("-----------------------------------------");
 		
 		// 삭제 후 전체 조회

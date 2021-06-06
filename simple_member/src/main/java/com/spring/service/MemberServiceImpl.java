@@ -39,4 +39,14 @@ public class MemberServiceImpl implements MemberService {
 	public List<MemberVO> getList() {
 		return mapper.list();
 	}
+
+	@Override
+	public boolean update2(MemberVO vo) {
+		return mapper.update2(vo)>0? true:false;
+	}
+
+	@Override
+	public boolean delete2(MemberVO vo) {
+		return mapper.delete2(vo)>0? true:false;
+	}
 }

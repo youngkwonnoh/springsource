@@ -18,4 +18,5 @@ public class MemberVO {
 	private String name;
 	private String gender;
 	private String email;
+	private String changPass;
 }
