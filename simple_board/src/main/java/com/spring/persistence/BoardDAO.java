@@ -45,11 +45,10 @@ public class BoardDAO {
 	}
 	
 	public List<BoardVO> list() {
-		List<BoardVO> list = new ArrayList<BoardVO>();
-		
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
+		List<BoardVO> list = new ArrayList<BoardVO>();
 		String sql = "select * from spring_board";
 		try {
 			con = getConnection();

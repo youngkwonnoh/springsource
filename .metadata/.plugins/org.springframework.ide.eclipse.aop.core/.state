@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
-<aop-project name="java_basic"/>
-<aop-project name="test"/>
+<aop-project name="mybatis"/>
+<aop-project name="simple_member"/>
+<aop-project name="simple_board_cp_jdbc"/>
 <aop-project name="spring_basic"/>
 <aop-project name="component_scan"/>
+<aop-project name="simple_board_cp"/>
+<aop-project name="simple_book_cp_jdbc"/>
+<aop-project name="simple_book"/>
+<aop-project name="simple_board_cp_mybatis"/>
+<aop-project name="java_basic"/>
+<aop-project name="test"/>
+<aop-project name="simple_book_mybatis"/>
 <aop-project name="simple_board"/>
+<aop-project name="simple_book_cp"/>
 </aop-reference-model>
