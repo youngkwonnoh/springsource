@@ -2,6 +2,7 @@ package com.spring.service;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,8 +21,8 @@ public class MemberServiceImpl implements MemberService {
 	}
 
 	@Override
-	public boolean update(MemberVO vo) {
-		return mapper.update(vo)>0? true:false;
+	public boolean update(String userid, String password, String changPass) {
+		return mapper.update(userid, password, changPass)>0? true:false;
 	}
 
 	@Override
