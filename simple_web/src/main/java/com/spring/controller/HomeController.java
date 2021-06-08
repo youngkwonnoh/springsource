@@ -8,9 +8,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import lombok.extern.log4j.Log4j2;
 
@@ -64,6 +66,20 @@ public class HomeController {
 		mav.addObject("test", "ModelAndView"); // == request.setAttribute();
 		mav.setViewName("result");
 		return mav;
+	}
+	
+	@GetMapping("/doB")
+	public String doB(RedirectAttributes rttr) {
+		log.info("doB 요청");
+		
+		// 값을 유지시키고 싶다면?
+		// 주소를 달아서 보냄
+		rttr .addAttribute("age1", 20); // http://localhost:8081/?age=10  path += "bno=3&page=1"
+		
+		// session 객체 사용(임시)
+		rttr.addFlashAttribute("age", 10);
+		
+		return "redirect:/";
 	}
 }
 
