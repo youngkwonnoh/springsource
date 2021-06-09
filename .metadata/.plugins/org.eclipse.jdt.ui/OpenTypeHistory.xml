@@ -10,4 +10,5 @@
     <typeInfo handle="=aop_factorial/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.spring.factorial{Calculator.java[Calculator" modifiers="513" timestamp="1623032444743"/>
     <typeInfo handle="=transaction/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.spring.service{SampleService.java[SampleService" modifiers="513" timestamp="1623034939555"/>
     <typeInfo handle="=transaction/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.spring.mapper{SampleMapper1.java[SampleMapper1" modifiers="513" timestamp="1623035825831"/>
+    <typeInfo handle="=register/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.spring.service{MemberService.java[MemberService" modifiers="513" timestamp="1623138897021"/>
 </typeInfoHistroy>

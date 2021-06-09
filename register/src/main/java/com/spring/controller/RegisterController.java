@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.spring.domain.MemberVO;
@@ -36,6 +37,18 @@ public class RegisterController {
 		}
 		// true
 		return "step2";
+	}
+	
+	// 중복 아이디 검사
+	@ResponseBody // 리턴값의 의미가 jsp를 찾으라는 의미가 아니고 결과값의 의미
+	@PostMapping("/checkId")
+	public String checkId(String userid) {
+		log.info("중복아이디 검사 " + userid);
+		MemberVO vo = service.dupId(userid);
+		if(vo!=null) {
+			return "false";
+		}
+		return "true";
 	}
 	
 	// 회원가입 정보를 가져오는 컨트롤러 생성
