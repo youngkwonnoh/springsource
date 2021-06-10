@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +12,7 @@
 </head>
 <body>
 <div class="jumbotron">
-	<h1>Book - 모델1</h1>
+	<h1>Book - Spring MVC</h1>
 </div>
 <div class="container-fluid">
 	<div class="row">
@@ -40,7 +41,14 @@
 			    </tr>
 			  </thead>
 			  <tbody><%-- 도서 목록 보기 --%>
-			   
+			   	<c:forEach var="vo" items="${list}">
+			   		<tr>
+			   			<td>${vo.code}</td>
+			   			<td>${vo.title}</td>
+			   			<td>${vo.writer}</td>
+			   			<td>${vo.price}</td>
+			   		</tr>
+			   	</c:forEach>
 			  </tbody>
 			</table>
 	      </div>

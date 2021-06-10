@@ -1,5 +1,0 @@
-package com.spring.poly;
-
-public interface TV {
-
-}

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<form action="">
+<form action="delete" method="post">
 	<div class="form-group">
 		<label for="code">Code</label> <input type="text" name="code"
 			id="code" placeholder="코드 입력" required class="form-control" />

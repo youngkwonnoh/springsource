@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +12,7 @@
 </head>
 <body>
 <div class="jumbotron">
-	<h1>Book - 모델1</h1>
+	<h1>Book - Spring MVC</h1>
 </div>
 <div class="container-fluid">
 	<div class="row">
@@ -26,10 +27,10 @@
 	  </div>
 	  <div class="col-8">
 	    <div class="tab-content" id="nav-tabContent">
-	      <div class="tab-pane fade show active" id="insert" role="tabpanel" aria-labelledby="list-home-list">
+	      <div class="tab-pane fade" id="insert" role="tabpanel" aria-labelledby="list-home-list">
 	      	<%@include file="book/insertForm.jsp" %>
 	      </div>
-	      <div class="tab-pane fade" id="search" role="tabpanel" aria-labelledby="list-profile-list">
+	      <div class="tab-pane fade show active" id="search" role="tabpanel" aria-labelledby="list-profile-list">
 	      	<table class="table">
 			  <thead>
 			    <tr>
@@ -40,7 +41,14 @@
 			    </tr>
 			  </thead>
 			  <tbody><%-- 검색 도서 목록 보기 --%>
-			   
+			   <c:forEach var="vo" items="${list}">
+			   		<tr>
+			   			<td>${vo.code}</td>
+			   			<td>${vo.title}</td>
+			   			<td>${vo.writer}</td>
+			   			<td>${vo.price}</td>
+			   		</tr>
+			   	</c:forEach>
 			  </tbody>
 			</table>
 	      </div>
@@ -57,7 +65,7 @@
 <script>
 $(function(){
 	$("#myList a[href='#all']").on('click',function(){
-		location.href="list.jsp";
+		location.href="/list";
 	})
 })
 </script>

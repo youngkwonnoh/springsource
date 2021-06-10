@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<form action="">
+<form action="search" method="post">
 	<div class="form-row">
 		<div class="form-group col-6">
 			<select name="criteria" id="" class="form-control">
