@@ -41,4 +41,5 @@
 </aspect-definition>
 </aop-project>
 <aop-project name="simple_board"/>
+<aop-project name="board"/>
 </aop-reference-model>
