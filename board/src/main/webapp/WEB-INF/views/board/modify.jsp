@@ -41,7 +41,9 @@
 	</div>
 </div>
 <%-- remove와 list를 위한 폼--%>
-<form action="" id="operForm">
+<form action="" id="operForm" method="post">
+	<input type="hidden" name="pageNum" value="${cri.pageNum}"/>
+	<input type="hidden" name="amount" value="${cri.amount}"/>
 	<input type="hidden" name="bno" value="${vo.bno}"/>
 </form>
 <%-- 스크립트 --%>

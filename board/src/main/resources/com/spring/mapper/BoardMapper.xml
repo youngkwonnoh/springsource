@@ -4,8 +4,12 @@
 	
 	<!-- 삽입 : bno, title, content, writer이며 bno의 경우 seq_board 값으로 삽입 (insert)-->
 	<insert id="insert">
+		<!-- 주로 pk 값을 미리 SQL 쿼리문을 통햇 처리해 두고 특정한 이름으로 결과를 보관 -->
+		<selectKey keyProperty="bno" order="BEFORE" resultType="int">
+			select seq_board.nextval from dual
+		</selectKey>
 		insert into spring_board(bno, title, content, writer)
-		values (seq_board.nextval, #{title}, #{content}, #{writer})
+		values (#{bno}, #{title}, #{content}, #{writer})
 	</insert>
 	
 	<!-- 삭제 : bno가 일치하면 삭제 (delete)-->
@@ -20,10 +24,29 @@
 		where bno = #{bno}
 	</update>
 	
-	<!-- 전체 조회 : list -->
+	<!-- 전체 조회 : list (페이지 나누기 전 -->
+	<!-- 
 	<select id="list" resultType="com.spring.domain.BoardVO">
 		select * from spring_board where bno > 0 order by bno desc, regdate desc
 	</select>
+	 -->
+	 
+	 <!-- 전체 조회 : list (페이지 나누기 적용 -->
+	 <select id="list" resultType="com.spring.domain.BoardVO">
+	 	<![CDATA[
+		 	select * from (select /*+INDEX_DESC(spring_board pk_spring_board) */
+		  						rownum rn, bno, title, writer, regdate, updatedate
+		  					from SPRING_BOARD
+		  					where rownum <= (#{pageNum} * #{amount}))
+			where rn > ((#{pageNum} - 1) * #{amount})
+	 	]]>
+	 </select>
+	 
+	 <!-- 전체 게시물 수 -->
+	 <select id="totalCnt" resultType="int">
+	 	select count(*) from spring_board where bno>0
+	 </select>
+	 
 	
 	<!-- 특정 번호 조회 : bno에 해당하는 게시물 가져오기 (read)-->
 	<select id="read" resultType="com.spring.domain.BoardVO">

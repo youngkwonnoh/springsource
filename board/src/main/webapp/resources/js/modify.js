@@ -17,6 +17,7 @@ $(function() {
 			operForm.attr('action', '/board/remove');
 		} else if(oper == "list") {
 			operForm.find("input[name='bno']").remove();
+			operForm.attr('method', 'get');
 			operForm.attr('action', '/board/list');
 		}
 		operForm.submit();
