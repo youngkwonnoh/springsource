@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="Form"/>
+		<item key="selection" value="lombok"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="lombok"/>
+			<item value="lombok\"/>
+			<item value="keyword"/>
+			<item value="leyword"/>
+			<item value="검색"/>
+			<item value="javax"/>
+			<item value="log"/>
+			<item value="jdbc"/>
+			<item value="son"/>
+			<item value="jack"/>
+			<item value="페이지"/>
 			<item value="form"/>
 			<item value="key"/>
 			<item value="back"/>
-			<item value="log"/>
 			<item value="context"/>
-			<item value="maven"/>
 		</list>
 		<list key="replacehistory">
 		</list>

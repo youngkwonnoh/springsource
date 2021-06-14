@@ -49,13 +49,16 @@
 							<form action="" id="searchForm">
 								<select name="type" id="" class="form-control">
 									<option value="">---------------</option>
-									<option value="T">제목</option>
-									<option value="C">내용</option>
-									<option value="W">작성자</option>
-									<option value="TC">제목 or 내용</option>
-									<option value="TCW">제목 or 내용 or 작성자</option>
+									<option value="T" <c:out value="${pageVO.cri.type=='T'?'selected':''}"/>>제목</option>
+									<option value="C" <c:out value="${pageVO.cri.type=='C'?'selected':''}"/>>내용</option>
+									<option value="W" <c:out value="${pageVO.cri.type=='W'?'selected':''}"/>>작성자</option>
+									<option value="TC" <c:out value="${pageVO.cri.type=='TC'?'selected':''}"/>>제목 or 내용</option>
+									<option value="TCW" <c:out value="${pageVO.cri.type=='TCW'?'selected':''}"/>>제목 or 내용 or 작성자</option>
 								</select>
-								<input type="text" name="keyword" id=""/>
+								<input type="text" name="keyword" value="${pageVO.cri.keyword}"/>
+								<!-- 검색시에도 페이지당 게시물 수와 현재 페이지에 대한 정보가 따라가야 한다. -->
+								<input type="hidden" name="pageNum" value="${pageVO.cri.pageNum}"/>
+								<input type="hidden" name="amount" value="${pageVO.cri.amount}"/>
 								<button type="button" class="btn btn-default">검색</button>
 							</form>
 						</div>
@@ -75,7 +78,7 @@
 				<div class="text-center">
 					<ul class="pagination">
 						<c:if test="${pageVO.prev}">
-							<li class="paginate_button previous"><a href="${pageVO.startPage-1}">Previous</a>
+							<li class="paginate_button previous"><a href="${pageVO.startPage-1}">Previous</a></li>
 						</c:if>
 						<c:forEach var="idx" begin="${pageVO.startPage}" end ="${pageVO.endPage}">
 							<li class="paginate_button ${pageVO.cri.pageNum==idx?'active':''}">
@@ -98,6 +101,8 @@
 
 <!-- 페이지 나누기 추가 -->
 <form action="list" method="get" id="actionForm">
+	<input type="hidden" name="type" value="${pageVO.cri.type}"/>
+	<input type="hidden" name="keyword" value="${pageVO.cri.keyword}"/>
 	<input type="hidden" name="pageNum" value="${pageVO.cri.pageNum}"/>
 	<input type="hidden" name="amount" value="${pageVO.cri.amount}"/>
 </form>

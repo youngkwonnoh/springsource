@@ -77,6 +77,8 @@ public class BoardController {
 		service.update(vo);
 		rttr.addFlashAttribute("result", "성공");
 		
+		rttr.addAttribute("type", cri.getType());
+		rttr.addAttribute("keyword", cri.getKeyword());
 		rttr.addAttribute("pageNum", cri.getPageNum());
 		rttr.addAttribute("amount", cri.getAmount());
 		
@@ -92,6 +94,8 @@ public class BoardController {
 		service.delete(bno);
 		rttr.addFlashAttribute("result", "성공");
 		
+		rttr.addAttribute("type", cri.getType());
+		rttr.addAttribute("keyword", cri.getKeyword());
 		rttr.addAttribute("pageNum", cri.getPageNum());
 		rttr.addAttribute("amount", cri.getAmount());
 		return "redirect:list";
