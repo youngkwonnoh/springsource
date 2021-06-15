@@ -42,7 +42,41 @@
 	</form>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script>
-	
+	$(function() {
+		$(".btn-primary").click(function(e) {
+			e.preventDefault();
+			
+			let param={
+				userid:$("input[name='userid']").val(),
+				current_password:$("#current_password").val(),
+				new_password:$("#new_password").val(),
+				confirm_password:$("#confirm_password").val()
+			}
+			
+			$.ajax({
+				url:"../changepwd2",
+				type:"put",
+				contentType:"application/json",
+				data:JSON.stringify(param),
+				success:function(data) {
+					if(data=='success'){
+						alert('비밀번호 변경에 성공하였습니다.\n다시 로그인해주세요');
+						location.href="/";
+					}
+				},
+				error:function(xhr, textStatus, error){
+					if(xhr.responseText==='not-equal'){
+						alert("비밀번호가 일치하지 않습니다.");
+						$("#new_password").val("");
+						$("#confirm_password").val("");
+					} else {
+						alert('비밀번호 변경에 실패하였습니다.');
+					}
+				}
+			})
+			
+		})
+	})
 	</script>
 </body>
 </html>

@@ -5,7 +5,7 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2021-06-14T15:11:34Z</updated>
+  <updated>2021-06-14T15:11:00Z</updated>
   <entry>
     <title>Spring Native 0.10.0 available now</title>
     <link rel="alternate" href="https://spring.io/blog/2021/06/14/spring-native-0-10-0-available-now" />
@@ -14,7 +14,7 @@
       <name>S?bastien Deleuze</name>
     </author>
     <id>tag:spring.io,2021-06-14:4468</id>
-    <updated>2021-06-14T15:11:34Z</updated>
+    <updated>2021-06-14T15:11:00Z</updated>
     <content type="html">&lt;div class="paragraph"&gt;
 &lt;p&gt;On behalf of the team and everyone who has contributed, I¡¯m happy to announce that Spring Native 0.10.0 has been released. It is based on &lt;a href="https://spring.io/blog/2021/05/20/spring-boot-2-5-is-now-ga"&gt;Spring Boot 2.5&lt;/a&gt; and &lt;a href="https://www.graalvm.org/release-notes/21_1/"&gt;GraalVM 21.1&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
@@ -48,10 +48,10 @@
 &lt;p&gt;We have been collaborating with the GraalVM team on bringing native image to the next level in terms of build plugins. The new &lt;a href="https://github.com/graalvm/native-build-tools"&gt;native build tools&lt;/a&gt; replace the former &lt;code&gt;native-image-maven-plugin&lt;/code&gt; and allow to build and test your native application using a local &lt;code&gt;native-image&lt;/code&gt; compiler.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
-&lt;p&gt;While only Maven support was previously available, now both Maven and Gradle plugins are provided. After &lt;a href="https://docs.spring.io/spring-native/docs/current/reference/htmlsingle/#_add_the_native_build_tools_plugin"&gt;configuring the native build tools plugin&lt;/a&gt;, you can build your application with &lt;code&gt;mvn -Pnative -DskipTests&lt;/code&gt; package or &lt;code&gt;gradle nativeBuild&lt;/code&gt;. But you can also run your JUnit 5 tests as a native image with &lt;code&gt;mvn -Pnative test&lt;/code&gt; or &lt;code&gt;gradle nativeTest&lt;/code&gt;. Spring Native itself  has been upgraded to add initial testing support so your &lt;code&gt;@SpringBootTest&lt;/code&gt; will run as a native image. This is an important milestone for native Spring Boot applications, but also for the JVM ecosystem including Spring itself which can now use those official plugins to improve the quality and the maintainability of the native support. You can read this &lt;a href="https://medium.com/graalvm/gradle-and-maven-plugins-for-native-image-with-initial-junit-testing-support-dde00a8caf0b"&gt;GraalVM dedicated blog post&lt;/a&gt; for more details.&lt;/p&gt;
+&lt;p&gt;While only Maven support was previously available, now both Maven and Gradle plugins are provided. If you are upgrading, the new Maven plugin coordinates are &lt;code&gt;org.graalvm.buildtools:native-maven-plugin:0.9.0&lt;/code&gt;. After &lt;a href="https://docs.spring.io/spring-native/docs/current/reference/htmlsingle/#_add_the_native_build_tools_plugin"&gt;configuring the native build tools plugin&lt;/a&gt;, you can build your application with &lt;code&gt;mvn -Pnative -DskipTests package&lt;/code&gt; or &lt;code&gt;gradle nativeBuild&lt;/code&gt;. But you can also run your JUnit 5 tests as a native image with &lt;code&gt;mvn -Pnative test&lt;/code&gt; or &lt;code&gt;gradle nativeTest&lt;/code&gt;. Spring Native itself  has been upgraded to add initial testing support so your &lt;code&gt;@SpringBootTest&lt;/code&gt; will run as a native image. This is an important milestone for native Spring Boot applications, but also for the JVM ecosystem including Spring itself which can now use those official plugins to improve the quality and the maintainability of the native support. You can read this &lt;a href="https://medium.com/graalvm/gradle-and-maven-plugins-for-native-image-with-initial-junit-testing-support-dde00a8caf0b"&gt;GraalVM dedicated blog post&lt;/a&gt; for more details.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;a href="https://start.spring.io"&gt;start.spring.io&lt;/a&gt; has been updated to configure the native built tools out-of-the-box in addition to the Buildpacks native support, so you can use the one that fits your needs.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://start.spring.io"&gt;start.spring.io&lt;/a&gt; has been updated to configure the native build tools out-of-the-box in addition to the Buildpacks native support, so you can use the one that fits your needs.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
