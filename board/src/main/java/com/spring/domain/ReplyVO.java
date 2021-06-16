@@ -18,6 +18,6 @@ public class ReplyVO {
 	private int bno;
 	private String reply; 
 	private String replyer;
-	private Date replydate;
-	private Date updatedate;
+	private Date replyDate;
+	private Date updateDate;
 }

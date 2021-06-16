@@ -56,12 +56,13 @@
 							<div class="header">
 								<strong class="primary-font">user00</strong>
 								<small class="pull-right text-muted">2021-06-15 14:25</small>
+								<p>Good Job!!</p>
 							</div>
 						</div>
 					</li>
 				</ul>
 			</div>
-			<div class="panel-footer"></div>
+			<div class="panel-footer"></div><!-- 댓글 페이지 나누기 -->
 		</div>
 	</div>
 </div>
@@ -83,18 +84,18 @@
 		</div>
 		<div class="form-group">
 			<label for="">작성자</label>
-			<input type="text" name="replyer" class="form-control" value="댓글내용"/>
+			<input type="text" name="replyer" class="form-control" value="작성자"/>
 		</div>
 		<div class="form-group">
 			<label for="">작성일</label>
-			<input type="text" name="replyDate" class="form-control" value="댓글내용"/>
+			<input type="text" name="replyDate" class="form-control" value="작성일"/>
 		</div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-success" id="modalRegisterBtn">등록</button>
         <button type="button" class="btn btn-warning" id="modalModifyBtn">수정</button>
         <button type="button" class="btn btn-danger" id="modalRemoveBtn">삭제</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal">종료</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" id="modalCloseBtn">종료</button>
       </div>
     </div>
   </div>

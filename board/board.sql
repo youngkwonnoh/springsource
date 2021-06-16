@@ -93,3 +93,6 @@ from ( /*+INDEX(spring_reply idx+reply)*/
 where rn > (2-1) * 10
 
 select * from spring_reply where bno=330;
+
+
+

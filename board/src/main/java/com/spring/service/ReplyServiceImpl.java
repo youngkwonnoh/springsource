@@ -4,9 +4,12 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.spring.domain.Criteria;
+import com.spring.domain.ReplyPageVO;
 import com.spring.domain.ReplyVO;
+import com.spring.mapper.BoardMapper;
 import com.spring.mapper.ReplyMapper;
 
 @Service
@@ -14,9 +17,14 @@ public class ReplyServiceImpl implements ReplyService {
 	
 	@Autowired
 	private ReplyMapper mapper;
-
+	
+	@Autowired
+	private BoardMapper boardMapper;
+	
+	@Transactional
 	@Override
 	public boolean replyInsert(ReplyVO reply) {
+		boardMapper.replyCntUpdate(reply.getBno(), 1);
 		return mapper.insert(reply)>0? true:false;
 	}
 
@@ -29,15 +37,19 @@ public class ReplyServiceImpl implements ReplyService {
 	public boolean replyUpdate(ReplyVO reply) {
 		return mapper.update(reply)>0? true:false;
 	}
-
+	
+	@Transactional
 	@Override
 	public boolean replyDelete(int rno) {
+		// rno를 이용해서 bno 알아내기
+		ReplyVO reply = mapper.read(rno);
+		boardMapper.replyCntUpdate(reply.getBno(), -1);
 		return mapper.delete(rno)>0? true:false;
 	}
 
 	@Override
-	public List<ReplyVO> getList(Criteria cri, int bno) {
-		return mapper.list(cri, bno);
+	public ReplyPageVO getList(Criteria cri, int bno) {
+		return new ReplyPageVO(mapper.getCountByBno(bno), mapper.list(cri, bno));
 	}
 
 }
