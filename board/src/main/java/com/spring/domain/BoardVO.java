@@ -1,6 +1,7 @@
 package com.spring.domain;
 
 import java.util.Date;
+import java.util.List;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -21,4 +22,7 @@ public class BoardVO {
 	private Date regdate;
 	private Date updatedate;
 	private int replycnt;
+	
+	// 첨부파일 리스트
+	private List<AttachFileDTO> attachList;
 }
