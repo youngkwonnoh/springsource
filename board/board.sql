@@ -106,5 +106,6 @@ create table spring_attach(
 alter table spring_attach add constraint pk_attach primary key(uuid);
 alter table spring_attach add constraint fk_board_attach foreign key(bno) references spring_board(bno);
 
-
+-- 파일 첨부 확인
+select * from spring_attach;
 

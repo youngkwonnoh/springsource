@@ -1,8 +1,14 @@
 package com.spring.controller;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,6 +17,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.spring.domain.AttachFileDTO;
 import com.spring.domain.BoardVO;
 import com.spring.domain.Criteria;
 import com.spring.domain.PageVO;
@@ -23,6 +30,8 @@ import lombok.extern.log4j.Log4j2;
 @RequestMapping("/board/*")
 public class BoardController {
 	
+	private static final int AttachFileDTO = 0;
+	private static final int List = 0;
 	@Autowired
 	private BoardService service;
 	
@@ -50,8 +59,13 @@ public class BoardController {
 	public String tegisterPost(BoardVO vo, RedirectAttributes rttr) {
 		log.info("새 글 등록 요청 " + vo);
 		
+		// 첨부파일 확인
+		if(vo.getAttachList()!=null) {
+			vo.getAttachList().forEach(attach -> log.info(""+attach));
+		}
+		
 		if(service.insert(vo)) {
-//			log.info("입력된 글 번호 " + vo.getBno());
+			// log.info("입력된 글 번호 " + vo.getBno());
 			rttr.addFlashAttribute("result", vo.getBno());
 			return "redirect:list";       // redirect:/board/list
 		} else {
@@ -74,6 +88,11 @@ public class BoardController {
 	public String modify(BoardVO vo, Criteria cri, RedirectAttributes rttr) {
 		log.info("수정 요청 " + vo + " 페이지 나누기 " + cri);
 		
+		// 첨부파일 확인
+		if(vo.getAttachList()!=null) {
+			vo.getAttachList().forEach(attach -> log.info(""+attach));
+		}
+		
 		service.update(vo);
 		rttr.addFlashAttribute("result", "성공");
 		
@@ -91,14 +110,51 @@ public class BoardController {
 	public String remove(int bno, Criteria cri, RedirectAttributes rttr) {
 		log.info("게시글 삭제" + bno);
 		
-		service.delete(bno);
-		rttr.addFlashAttribute("result", "성공");
+		// 서버(폴더)에 저장된 첨부파일 삭제
+		// 1. bno에 해당하는 첨부파일 목록 알아내기
+		List<AttachFileDTO> attachList = service.getAttachList(bno);
 		
+		// 게시글 삭제 + 첨부파일 삭제
+		if(service.delete(bno)) {
+			// 2. 폴더 파일 삭제
+			deleteFiles(attachList);
+			rttr.addFlashAttribute("result", "성공");
+		}
+
 		rttr.addAttribute("type", cri.getType());
 		rttr.addAttribute("keyword", cri.getKeyword());
 		rttr.addAttribute("pageNum", cri.getPageNum());
 		rttr.addAttribute("amount", cri.getAmount());
 		return "redirect:list";
+	}
+	
+	// 첨부물 가져오기
+	@GetMapping("/getAttachList")
+	public ResponseEntity<List<AttachFileDTO>> getAttachList(int bno){
+		log.info("첨부물 가져오기" + bno);
+		return new ResponseEntity<List<AttachFileDTO>>(service.getAttachList(bno), HttpStatus.OK);
+	}
+	
+	private void deleteFiles(List<AttachFileDTO> attachList) {
+		log.info("첨부파일 삭제 " + attachList);
+		
+		if(attachList==null || attachList.size()<=0) {
+			return;
+		}
+		
+		for(AttachFileDTO dto:attachList) {
+			Path path = Paths.get("d:\\upload\\"+dto.getUploadPath()+"\\"+dto.getUuid()+"_"+dto.getFileName());
+			
+			try {
+				Files.deleteIfExists(path);
+				if(Files.probeContentType(path).startsWith("image")) {
+					Path thumbnail = Paths.get("d:\\upload\\"+dto.getUploadPath()+"\\s_"+dto.getUuid()+"_"+dto.getFileName());
+					Files.delete(thumbnail);
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 	
 }

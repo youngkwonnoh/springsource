@@ -8,9 +8,9 @@
 		values(#{uuid}, #{uploadPath},#{fileName}, #{fileType}, #{bno}) 	
 	</insert>
 	
-	<!-- delete : id는 delete, uuid 일치 시 -->
+	<!-- delete : id는 delete, bno 일치 시 -->
 	<delete id="delete">
-		delete from spring_attach where uuid = #{uuid}
+		delete from spring_attach where bno = #{bno}
 	</delete>
 	
 	<!-- select : id는 findByBno, bno 일치 시(AttachFileDTO 이용) -->

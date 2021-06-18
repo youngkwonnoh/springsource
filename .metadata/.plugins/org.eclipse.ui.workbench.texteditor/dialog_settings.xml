@@ -8,6 +8,8 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="jacksondata"/>
+			<item value="target"/>
 			<item value="FormData"/>
 			<item value="formData"/>
 			<item value="promary-font"/>
@@ -21,8 +23,6 @@
 			<item value="data"/>
 			<item value="lombok"/>
 			<item value="lombok\"/>
-			<item value="keyword"/>
-			<item value="leyword"/>
 		</list>
 		<list key="replacehistory">
 		</list>

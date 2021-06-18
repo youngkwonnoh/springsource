@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
 <%@include file="../includes/header.jsp"%>
+<link rel="stylesheet" href="/resources/dist/css/attach.css" />
 <div class="row">
 	<div class="col-lg-12">
 		<h1 class="page-header">Board Modify</h1>
@@ -40,6 +40,25 @@
 		</div>
 	</div>
 </div>
+<%-- 첨부파일 목록 보여주기 --%>
+<div class="row">
+		<div class="col-lg-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<i class="fa fas fa-file"></i>Files
+				</div>
+			<div class="panel-body">
+				<div class="form-group uploadDiv">
+					<input type="file" name="uploadFile" multiple />
+				</div>
+				<div class="uploadResult">
+					<ul></ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 <%-- remove와 list를 위한 폼--%>
 <form action="" id="operForm" method="post">
 	<input type="hidden" name="type" value="${cri.type}"/>
@@ -49,5 +68,8 @@
 	<input type="hidden" name="bno" value="${vo.bno}"/>
 </form>
 <%-- 스크립트 --%>
+<script>
+	let bno = ${vo.bno};
+</script>
 <script src="/resources/js/modify.js"></script>
 <%@include file="../includes/footer.jsp"%>
