@@ -109,3 +109,7 @@ alter table spring_attach add constraint fk_board_attach foreign key(bno) refere
 -- 파일 첨부 확인
 select * from spring_attach;
 
+-- 어제 날짜
+select * from spring_attach
+where uploadPath = to_char(sysdate-1, 'yyyy\mm\dd');
+
