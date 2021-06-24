@@ -24,6 +24,9 @@
 		<!-- 로그 아웃 담당 -->
 		<security:logout invalidate-session="true" logout-success-url="/"/>
 		
+		<!-- remember-me 활성화 -->
+		<security:remember-me data-source-ref="ds" token-validity-seconds="604800"/>
+		
 		<!-- 사용자의 요청을 가로채서 권한 여부 확인 -->
 		<!-- <security:intercept-url pattern="/user-page" access="hasRole('ROLE_USER')"/>
 		<security:intercept-url pattern="/admin-page" access="hasRole('ROLE_ADMIN')"/>  -->
