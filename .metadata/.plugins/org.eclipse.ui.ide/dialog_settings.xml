@@ -14,6 +14,10 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\노영권\Desktop\daoAuthenticate"/>
+			<item value="C:\Users\노영권\Desktop\daoAuthenticate_test"/>
+			<item value="C:\Users\노영권\Desktop\security_daoAuthenticate_test"/>
+			<item value="C:\Users\노영권\Desktop\security_daoAuthenticate"/>
 			<item value="C:\Users\노영권\Downloads\springsource"/>
 			<item value="D:\springsource\test"/>
 		</list>

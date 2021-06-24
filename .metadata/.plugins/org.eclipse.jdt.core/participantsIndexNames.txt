@@ -3,6 +3,8 @@ D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\886553249.
 \register_rest\src\main\java
 D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3495206064.index
 \mybatis\src\main\java
+D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\82754199.index
+\security_daoAuthenticate\src\main\java
 D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\370721026.index
 \aop\src\main\java
 D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\241279088.index
@@ -19,12 +21,16 @@ D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1690496588
 \register\src\main\java
 D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1823557430.index
 \test\src\main\java
+D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2337993292.index
+\sercurity_daoAuthenticate\src\main\java
 D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1940165941.index
 \java_basic\src\main\java
 D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1225793032.index
 \simple_book\src\main\java
 D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4291628238.index
 \component_scan\src\main\java
+D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2933546553.index
+\security_authentication\src\main\java
 D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1686694614.index
 \simple_member\src\main\java
 D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1686743617.index
@@ -51,10 +57,14 @@ D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\164032365.
 \simple_web_javaconfig\src\main\java
 D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2099902333.index
 \simple_web\src\main\java
+D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2330275035.index
+\security_daoAuthenticate\src\main\java
 D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1359774915.index
 \log\src\main\java
 D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1314789698.index
 \sercurity\src\main\java
+D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\675277071.index
+\security\src\main\java
 D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2857176084.index
 \board\src\main\java
 D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\134108179.index
@@ -73,6 +83,8 @@ D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1644303434
 \scheduler\src\main\java
 D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1279240221.index
 \simple_web\src\main\java
+D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1523505587.index
+\sercurity_daoAuthenticate\src\main\java
 D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\612731687.index
 \transaction\src\main\java
 D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4139635655.index
@@ -83,6 +95,8 @@ D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\955803260.
 \book_rest\src\main\java
 D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1611955475.index
 \board\src\main\java
+D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\317076001.index
+\security_authentication\src\main\java
 D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1126729634.index
 \aop_annotation\src\main\java
 D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3514758145.index
@@ -99,6 +113,8 @@ D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\630934839.
 \simple_web_javaconfig\src\main\java
 D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\991826302.index
 \simple_book_cp_jdbc\src\main\java
+D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\606342943.index
+\security\src\main\java
 D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3242836535.index
 \transaction_annotation\src\main\java
 D:\springsource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3963237326.index
