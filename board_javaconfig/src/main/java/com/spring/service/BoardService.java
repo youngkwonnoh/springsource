@@ -14,5 +14,7 @@ public interface BoardService {
 	public BoardVO read(int bno);
 	public int total(Criteria cri);
 	
+	public boolean deleteAll(int bno);
+	
 	public List<AttachFileDTO> getAttachList(int bno);
 }

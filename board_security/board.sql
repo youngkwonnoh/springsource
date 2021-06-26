@@ -134,3 +134,6 @@ create table spring_member_auth(
 select * from spring_member;
 select * from spring_member_auth;
 
+-- 현재 사용자 확인
+select * from persistent_logins;
+

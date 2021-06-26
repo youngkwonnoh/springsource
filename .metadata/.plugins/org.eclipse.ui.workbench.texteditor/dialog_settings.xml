@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="$2a$10$e3tpbztf2dk1YTL0q5BLa.2l98nYAAckf1eA8u/UjE0u/vlWzEMPK"/>
+		<item key="selection" value="remove"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="$2a$10$e3tpbztf2dk1YTL0q5BLa.2l98nYAAckf1eA8u/UjE0u/vlWzEMPK"/>
-			<item value=" lee123  lee123@gmail.com  1       $2a$10$e3tpbztf2dk1YTL0q5BLa.2l98nYAAckf1eA8u/UjE0u/vlWzEMPK"/>
-			<item value="loadUserByUsername"/>
-			<item value="register 요청"/>
-			<item value="hong"/>
-			<item value="user"/>
-			<item value="service"/>
-			<item value="SpUser"/>
-			<item value="요청"/>
-			<item value="maven"/>
-			<item value="maven-war"/>
-			<item value="maven war"/>
-			<item value="123"/>
-			<item value="datasourcetran"/>
-			<item value="datasource"/>
+			<item value="remove"/>
+			<item value="logout"/>
+			<item value="test"/>
+			<item value="serc"/>
+			<item value="ser"/>
+			<item value="sec"/>
+			<item value="springframework."/>
+			<item value="org"/>
+			<item value=".boot"/>
+			<item value="data"/>
+			<item value="javax.xml"/>
+			<item value="javax"/>
+			<item value="xml"/>
+			<item value="boot"/>
+			<item value="map"/>
 		</list>
 		<list key="replacehistory">
 		</list>
