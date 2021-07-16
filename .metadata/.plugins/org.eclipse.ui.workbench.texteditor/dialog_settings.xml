@@ -1,35 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="remove"/>
+		<item key="selection" value="textcenter"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="remove"/>
-			<item value="logout"/>
-			<item value="test"/>
-			<item value="serc"/>
-			<item value="ser"/>
-			<item value="sec"/>
-			<item value="springframework."/>
-			<item value="org"/>
-			<item value=".boot"/>
-			<item value="data"/>
-			<item value="javax.xml"/>
-			<item value="javax"/>
-			<item value="xml"/>
-			<item value="boot"/>
-			<item value="map"/>
+			<item value="textcenter"/>
+			<item value="li"/>
+			<item value="&lt;ul"/>
+			<item value="transi"/>
+			<item value="-----------------------------"/>
+			<item value="후기"/>
+			<item value="제목1"/>
+			<item value="제목4"/>
+			<item value="slide"/>
+			<item value="620"/>
+			<item value="row"/>
+			<item value="col-md-12"/>
+			<item value="card-img-top"/>
+			<item value="card"/>
+			<item value="margintb20"/>
 		</list>
 		<list key="replacehistory">
+			<item value="u_password"/>
+			<item value="u_userid"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="8"/>
-		<item key="DIALOG_Y_ORIGIN" value="214"/>
+		<item key="DIALOG_X_ORIGIN" value="310"/>
+		<item key="DIALOG_Y_ORIGIN" value="69"/>
 		<item key="DIALOG_WIDTH" value="288"/>
 		<item key="DIALOG_HEIGHT" value="391"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>

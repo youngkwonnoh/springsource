@@ -16,6 +16,8 @@ import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
+import org.springframework.security.web.csrf.CsrfFilter;
+import org.springframework.web.filter.CharacterEncodingFilter;
 
 import com.spring.handler.CustomAccessDeniedHandler;
 import com.spring.handler.CustomLoginSuccessHandler;
@@ -81,6 +83,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //		http.authorizeRequests()
 //			.antMatchers("/login")
 //			.permitAll();
+		
+		CharacterEncodingFilter filter = new CharacterEncodingFilter();
+		filter.setEncoding("UTF-8");
+		filter.setForceEncoding(true);
+		http.addFilterBefore(filter, CsrfFilter.class);
 		
 		/*
 		<!-- 접근 제한 시 handler를 거쳐 컨트롤러로 이동하는 형태 -->

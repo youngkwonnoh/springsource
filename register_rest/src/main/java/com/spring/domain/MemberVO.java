@@ -14,8 +14,9 @@ import lombok.ToString;
 public class MemberVO {
 	private String userid;
 	private String password;
-	private String confirm_password;
+//	private String confirm_password;
 	private String name;
-	private String gender;
+	private String phone;
 	private String email;
+	private String address;
 }
