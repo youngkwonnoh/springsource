@@ -5991,3 +5991,9 @@ java.lang.Exception: Project 'CampusTeamProject' is not open.
 	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$1.execute(IndexManager.java:1073)
 	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:414)
 	at java.base/java.lang.Thread.run(Thread.java:832)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-07-16 14:39:37.874
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-07-16 14:39:37.882
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
